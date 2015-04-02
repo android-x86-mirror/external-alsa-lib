@@ -10,10 +10,10 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := libasound
 LOCAL_MODULE_TAGS := optional
-LOCAL_PRELINK_MODULE := false
-LOCAL_ARM_MODE := arm
+LOCAL_MULTILIB := 32
 
-LOCAL_C_INCLUDES += $(LOCAL_PATH)/include
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_C_INCLUDES)
 
 # libasound must be compiled with -fno-short-enums, as it makes extensive
 # use of enums which are often type casted to unsigned ints.
