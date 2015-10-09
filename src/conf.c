@@ -413,6 +413,7 @@ beginning:</P>
 
 */
 
+
 #include <stdarg.h>
 #include <limits.h>
 #include <sys/stat.h>
@@ -426,7 +427,7 @@ beginning:</P>
 
 #ifdef HAVE_LIBPTHREAD
 static pthread_mutex_t snd_config_update_mutex =
-				PTHREAD_RECURSIVE_MUTEX_INITIALIZER;  //another bad fix by fattire was _NP
+				PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
 #endif
 
 struct _snd_config {
