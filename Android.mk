@@ -13,7 +13,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MULTILIB := 32
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
-LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_C_INCLUDES)
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
 
 # libasound must be compiled with -fno-short-enums, as it makes extensive
 # use of enums which are often type casted to unsigned ints.
